@@ -64,6 +64,7 @@ def checkout(cart, coupons)
   
   final_cart.each do |item, info|
     total += final_cart[:price]
+    binding.pry
   end
   #binding.pry 
   
