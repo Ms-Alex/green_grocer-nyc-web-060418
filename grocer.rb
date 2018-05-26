@@ -60,6 +60,7 @@ def checkout(cart, coupons)
   # code here
   total = 0.0
   final_cart = consolidate_cart(cart)
+  final_cart = apply_coupons
   
   final_cart.each do |item, info|
     total += final_cart[item][:price]
