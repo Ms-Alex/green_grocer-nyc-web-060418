@@ -59,13 +59,13 @@ end
 def checkout(cart, coupons)
   # code here
   final_cart = consolidate_cart(cart)
-  binding.pry
+  
   
   total = 0
   final_cart.each do |item, info|
     total += final_cart[:price]
   end
-    
+  binding.pry  
   #final_cart = apply_coupons(cart, coupons)
   #final_cart = 
   
