@@ -71,5 +71,5 @@ def checkout(cart, coupons)
   
   
   #total *= (0.90) if total > 100.0
-  total.round(2)
+  total
 end
