@@ -18,8 +18,6 @@ def apply_coupons(cart, coupons)
   # code here
   
   result = cart
-  
-  #cart.each do |item, info|
       
     coupons.each do |coupon_items|
       item = coupon_items[:item]
