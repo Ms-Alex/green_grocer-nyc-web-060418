@@ -28,10 +28,7 @@ def apply_coupons(cart, coupons)
         if result["#{item} W/COUPON"] #.keys.include?("#{item} W/COUPON")
           result["#{item} W/COUPON"][:count] += 1
         else
-          result["#{item} W/COUPON"] = {
-              :price => coupon_items[:price],
-              :clearance => cart[item][:clearance],
-              :count => 1
+          result["#{item} W/COUPON"] = {:price => coupon_items[:price], :clearance => cart[item][:clearance], :count => 1
           }
           
         end
