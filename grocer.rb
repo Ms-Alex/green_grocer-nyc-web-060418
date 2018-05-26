@@ -65,7 +65,7 @@ def checkout(cart, coupons)
   final_cart.each do |item, info|
     total += final_cart[:price]
   end
-  binding.pry 
+  #binding.pry 
   
   
   #total *= (0.90) if total > 100.0
