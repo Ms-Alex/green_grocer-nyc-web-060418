@@ -19,10 +19,10 @@ def apply_coupons(cart, coupons)
   
   result = cart
   
-  #cart.each do |item, info|
+  cart.each do |item, info|
       
     coupons.each do |coupon_items|
-      item = coupon_items[:item]
+      #item = coupon_items[:item]
       if cart[item] && cart[item][:count] >= coupon_items[:num]
         result[item][:count] -= coupon_items[:num]
         if result.keys.include?("#{item} W/COUPON")
