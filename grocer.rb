@@ -19,17 +19,16 @@ def apply_coupons(cart, coupons)
   
   result = cart
       
-    coupons.each do |coupon_items|
-      item = coupon_items[:item]
+  coupons.each do |coupon_items|
+    item = coupon_items[:item]
       
-      if cart[item] && cart[item][:count] >= coupon_items[:num]
-        result[item][:count] -= coupon_items[:num]
+    if cart[item] && cart[item][:count] >= coupon_items[:num]
+      result[item][:count] -= coupon_items[:num]
         
-        if result["#{item} W/COUPON"] 
-          result["#{item} W/COUPON"][:count] += 1
-        else
-          result["#{item} W/COUPON"] = { :price => coupon_items[:cost], :clearance => cart[item][:clearance], :count => 1
-          }
+      if result["#{item} W/COUPON"] 
+        result["#{item} W/COUPON"][:count] += 1
+      else
+        result["#{item} W/COUPON"] = { :price => coupon_items[:cost], :clearance => cart[item][:clearance], :count => 1 }
           
         end
       end
