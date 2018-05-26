@@ -59,8 +59,8 @@ end
 def checkout(cart, coupons)
   # code here
   final_cart = consolidate_cart(cart)
-  final_cart = apply_coupons(cart, coupons)
-  final_cart = 
+  #final_cart = apply_coupons(cart, coupons)
+  #final_cart = 
   
   
   #total *= (0.90) if total > 100.0
